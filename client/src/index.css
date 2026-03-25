@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-light: theme('colors.blue.100');
+  --color-brand: theme('colors.blue.500');
+  --color-brand-dark: theme('colors.blue.900');
+}
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@layer base {
+  body {
+    @apply min-h-screen text-gray-900 bg-white transition-colors duration-300;
+  }
+  
+  [data-theme='dark'] body {
+    @apply text-white bg-gray-900;
+  }
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-br from-blue-900 via-blue-500 to-white/100;
+}
+
+[data-theme='dark'] .gradient-bg {
+  @apply bg-gradient-to-br from-gray-900 via-blue-900 to-black;
+}
