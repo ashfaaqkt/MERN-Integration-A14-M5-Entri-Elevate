@@ -9,7 +9,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:5001/api/users/register', formData);
+      const { data } = await axios.post('https://mern-integration-a14-m5-entri-elevate.onrender.com/api/users/register', formData);
       localStorage.setItem('userInfo', JSON.stringify(data));
       window.location.href = '/dashboard';
     } catch (err) {
