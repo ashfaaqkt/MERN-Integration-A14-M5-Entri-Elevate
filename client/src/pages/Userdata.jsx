@@ -14,7 +14,7 @@ const Userdata = () => {
   const fetchCustomers = async () => {
     try {
       if (!token) return;
-      const { data } = await axios.get('http://localhost:5000/api/customers', config);
+      const { data } = await axios.get('http://localhost:5001/api/customers', config);
       setCustomers(data);
     } catch (err) {
       console.error(err);
@@ -29,9 +29,9 @@ const Userdata = () => {
     e.preventDefault();
     try {
       if (editingId) {
-        await axios.put(`http://localhost:5000/api/customers/${editingId}`, formData, config);
+        await axios.put(`http://localhost:5001/api/customers/${editingId}`, formData, config);
       } else {
-        await axios.post('http://localhost:5000/api/customers', formData, config);
+        await axios.post('http://localhost:5001/api/customers', formData, config);
       }
       setIsModalOpen(false);
       setFormData({ name: '', email: '', phone: '', company: '', status: 'Active' });
@@ -45,7 +45,7 @@ const Userdata = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this customer?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/customers/${id}`, config);
+        await axios.delete(`http://localhost:5001/api/customers/${id}`, config);
         fetchCustomers();
       } catch (err) {
         console.error(err);

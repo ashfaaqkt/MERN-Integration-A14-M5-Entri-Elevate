@@ -9,7 +9,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('http://localhost:5000/api/users/login', formData);
+      const { data } = await axios.post('http://localhost:5001/api/users/login', formData);
       localStorage.setItem('userInfo', JSON.stringify(data));
       window.location.href = '/dashboard';
     } catch (err) {
