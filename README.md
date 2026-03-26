@@ -11,8 +11,11 @@
 
 ---
 
-## 🔗 Live Demo
+## 🔗 Live Demo & Preview
 > **Live Preview:** [Link to be added after hosting]
+> 
+> 💡 **Project Demonstration:** A full screen recording of the completed MERN integration CRM web application is available natively in the repository!  
+> 🎥 **[Watch the Screen Recording Here](./screenrecord/Screen%20Recording.mov)**
 
 ## 🌟 Key Features
 - **Modern Frontend Ecosystem**: Developed rapidly using React.js and Vite.
