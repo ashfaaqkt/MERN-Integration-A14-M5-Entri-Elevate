@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: '', email: '', password: '' });
   const [error, setError] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const { data } = await axios.post('https://mern-integration-a14-m5-entri-elevate.onrender.com/api/users/register', formData);
       localStorage.setItem('userInfo', JSON.stringify(data));
-      window.location.href = '/dashboard';
+      navigate('/dashboard');
     } catch (err) {
       setError(err.response?.data?.message || 'Registration failed');
     }
