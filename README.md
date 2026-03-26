@@ -11,11 +11,14 @@
 
 ---
 
-## 🔗 Live Demo & Preview
-> **Live Preview:** [Link to be added after hosting]
+## 🔗 Live Demo & Hosting Strategy
+> **Live Frontend (Vercel):** [https://mern-integration-a14-m5-entri-eleva.vercel.app/login](https://mern-integration-a14-m5-entri-eleva.vercel.app/login)
+> **Live Backend API (Render):** `https://mern-integration-a14-m5-entri-elevate.onrender.com`
 > 
-> 💡 **Project Demonstration:** A full screen recording of the completed MERN integration CRM web application is available natively in the repository!  
-> 🎥 **[Watch the Screen Recording Here](./screenrecord/Screen%20Recording.mov)**
+> 💡 **Deployment Architecture:** The React frontend is deployed via Vercel for fast edge delivery, while the Express backend is deployed on Render to securely maintain the MongoDB Atlas connection. All React API components have been thoroughly updated to fetch entirely from the production Render URL.
+> 
+> 🎥 **Project Demonstration:** A full screen recording of the MERN integration CRM web application in action is available natively in the repository!  
+> 👉 **[Watch the Screen Recording Here](./screenrecord/Screen%20Recording.mov)**
 
 ## 🌟 Key Features
 - **Modern Frontend Ecosystem**: Developed rapidly using React.js and Vite.
